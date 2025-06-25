@@ -1,0 +1,61 @@
+.emotion-select-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f7f7f7;
+}
+.emotion-select-card {
+  width: 90vw;
+  max-width: 600rpx;
+  background: #fff;
+  border-radius: 36rpx;
+  box-shadow: 0 4rpx 24rpx #e0e0e0;
+  padding: 48rpx 24rpx 32rpx 24rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.emotion-select-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 40rpx;
+}
+.emotion-select-item {
+  width: 120rpx;
+  height: 160rpx;
+  background: #f5f5f5;
+  border-radius: 24rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 12rpx;
+  transition: box-shadow 0.2s, background 0.2s;
+}
+.emotion-select-item.selected {
+  background: #b6e3e0;
+  box-shadow: 0 8rpx 32rpx #b6e3e0;
+}
+.emotion-select-img {
+  width: 64rpx;
+  height: 64rpx;
+  margin-bottom: 12rpx;
+}
+.emotion-select-label {
+  font-size: 28rpx;
+  color: #4CAF50;
+  font-weight: 500;
+}
+.emotion-confirm-btn {
+  width: 80%;
+  margin-top: 16rpx;
+  background: #4CAF50;
+  color: #fff;
+  border-radius: 24rpx;
+  font-size: 32rpx;
+  padding: 16rpx 0;
+  border: none;
+} 

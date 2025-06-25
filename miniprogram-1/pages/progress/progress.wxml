@@ -1,0 +1,17 @@
+<view class="treehole-page">
+  <view class="treehole-header">情绪树洞</view>
+  <view class="treehole-tip">这里是情绪树洞，有什么想说的都可以跟我说哟~</view>
+  <scroll-view class="treehole-chat" scroll-y="true">
+    <block wx:for="{{messages}}" wx:key="index">
+      <view class="treehole-msg {{item.role}}">
+        <image wx:if="{{item.role==='bot'}}" class="treehole-avatar" src="/assets/treehole_avatar.png" mode="aspectFit" />
+        <image wx:if="{{item.role==='user'}}" class="treehole-avatar" src="/assets/avatar_placeholder.png" mode="aspectFit" />
+        <view class="treehole-bubble">{{item.content}}</view>
+      </view>
+    </block>
+  </scroll-view>
+  <view class="treehole-input-bar">
+    <input class="treehole-input" placeholder="输入你想说的话..." value="{{inputValue}}" bindinput="onInput" confirm-type="send" bindconfirm="onSend" />
+    <button class="treehole-send-btn" bindtap="onSend">发送</button>
+  </view>
+</view> 

@@ -1,0 +1,48 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/progress/progress",
+    "pages/rewards/rewards",
+    "pages/logs/logs",
+    "pages/emotionSelect/emotionSelect",
+    "pages/mbtiTest/mbtiTest",
+    "pages/mbtiDetail/index",
+    "pages/mbtiDetail/detail"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "人格森林漫游指南",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "componentFramework": "glass-easel",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents",
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#4CAF50",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "assets/home_placeholder.png",
+        "selectedIconPath": "assets/home_placeholder_selected.png",
+        "text": "主页"
+      },
+      {
+        "pagePath": "pages/progress/progress",
+        "iconPath": "assets/progress_placeholder.png",
+        "selectedIconPath": "assets/progress_placeholder_selected.png",
+        "text": "情绪树洞"
+      },
+      {
+        "pagePath": "pages/rewards/rewards",
+        "iconPath": "assets/rewards_placeholder.png",
+        "selectedIconPath": "assets/rewards_placeholder_selected.png",
+        "text": "个人信息"
+      }
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+<view class="mbti-detail-container">
+  <image class="mbti-detail-img" src="{{mbti.img}}" mode="aspectFit"></image>
+  <view class="mbti-detail-title">{{mbti.name}} <text class="mbti-detail-type">({{type}})</text></view>
+
+  <view class="mbti-detail-section">
+    <view class="mbti-detail-subtitle">人格分析</view>
+    <view class="mbti-detail-content">{{mbti.desc}}</view>
+  </view>
+
+  <view class="mbti-detail-section">
+    <view class="mbti-detail-subtitle">主要特征</view>
+    <view class="mbti-detail-content">{{mbti.feature}}</view>
+  </view>
+
+  <view class="mbti-detail-section">
+    <view class="mbti-detail-subtitle">适合职业</view>
+    <view class="mbti-detail-content">
+      <text wx:for="{{mbti.jobs}}" wx:key="*this">{{item}}{{index < mbti.jobs.length - 1 ? '、' : ''}}</text>
+    </view>
+  </view>
+</view> 

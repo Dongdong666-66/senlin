@@ -1,0 +1,23 @@
+<view class="emotion-select-container">
+  <view class="emotion-select-card">
+    <view class="emotion-select-list">
+      <view class="emotion-select-item {{selected==='happy'?'selected':''}}" data-type="happy" bindtap="selectEmotion">
+        <image class="emotion-select-img" src="/assets/emotion_happy.png" mode="aspectFit" />
+        <text class="emotion-select-label">开心</text>
+      </view>
+      <view class="emotion-select-item {{selected==='angry'?'selected':''}}" data-type="angry" bindtap="selectEmotion">
+        <image class="emotion-select-img" src="/assets/emotion_angry.png" mode="aspectFit" />
+        <text class="emotion-select-label">生气</text>
+      </view>
+      <view class="emotion-select-item {{selected==='sad'?'selected':''}}" data-type="sad" bindtap="selectEmotion">
+        <image class="emotion-select-img" src="/assets/emotion_sad.png" mode="aspectFit" />
+        <text class="emotion-select-label">难过</text>
+      </view>
+      <view class="emotion-select-item {{selected==='calm'?'selected':''}}" data-type="calm" bindtap="selectEmotion">
+        <image class="emotion-select-img" src="/assets/emotion_calm.png" mode="aspectFit" />
+        <text class="emotion-select-label">平静</text>
+      </view>
+    </view>
+    <button class="emotion-confirm-btn" bindtap="confirmSelect">确认</button>
+  </view>
+</view> 

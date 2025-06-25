@@ -1,0 +1,87 @@
+<!--index.wxml-->
+<scroll-view class="scrollarea" scroll-y type="list">
+  <view class="container">
+    <!-- your mbti 区域（装饰框包裹） -->
+    <view class="mbti-decor">
+      <view class="mbti-section">
+        <text class="mbti-label">your mbti：</text>
+        <text class="mbti-value">{{userMbti || '----'}}</text>
+      </view>
+    </view>
+    <!-- 情绪记录区域 -->
+    <view class="emotion-card emotion-card-wide">
+      <view class="emotion-header">
+        <view class="emotion-title">本周情绪</view>
+        <view class="emotion-date">{{weekRange}}</view>
+      </view>
+      <view class="emotion-days">
+        <block wx:for="{{weekDays}}" wx:key="index">
+          <view class="emotion-day {{todayIndex === index ? 'emotion-day-selected' : ''}}" bindtap="goToEmotionSelect" data-index="{{index}}">
+            <block wx:if="{{emotions[index]}}">
+              <image class="emotion-day-img" src="/assets/emotion_{{emotions[index]}}.png" mode="aspectFit" />
+            </block>
+            <block wx:else>
+              <text class="emotion-day-num">{{item.date}}</text>
+            </block>
+            <text class="emotion-day-week">{{item.week}}</text>
+          </view>
+        </block>
+      </view>
+    </view>
+    <!-- mbti测试 和 mbti详解 按钮（无多余圆圈） -->
+    <view class="mbti-btns mbti-btns-main">
+      <button class="mbti-btn mbti-btn-main mbti-btn-dark" bindtap="goToTest">mbti测试</button>
+      <button class="mbti-btn mbti-btn-main mbti-btn-dark" bindtap="goToDetail">mbti详解</button>
+    </view>
+    <!-- 顶部头像和设置icon -->
+    <view class="top-bar">
+      <image class="avatar" src="/assets/avatar_placeholder.png" mode="aspectFill" />
+      <icon type="success" size="32" class="setting-icon" />
+    </view>
+
+    <!-- 进度环区域 -->
+    <view class="progress-section">
+      <view class="progress-bg">
+        <icon type="success_no_circle" size="80" class="progress-ring" />
+        <view class="progress-circle"></view>
+      </view>
+    </view>
+
+    <!-- 步数和喝水卡片 -->
+    <view class="info-cards">
+      <view class="info-card">
+        <icon type="success" size="32" />
+        <view class="info-icon-bg"></view>
+      </view>
+      <view class="info-card">
+        <icon type="info" size="32" />
+        <view class="info-icon-bg"></view>
+      </view>
+    </view>
+
+    <!-- 日期选择区域 -->
+    <view class="calendar-section">
+      <view class="calendar-bar">
+        <view class="calendar-day"></view>
+        <view class="calendar-day selected"></view>
+        <view class="calendar-day"></view>
+        <view class="calendar-day"></view>
+        <view class="calendar-day"></view>
+        <view class="calendar-day"></view>
+        <view class="calendar-day"></view>
+      </view>
+    </view>
+
+    <!-- 早餐卡片 -->
+    <view class="meal-card">
+      <image class="meal-img" src="/assets/food_placeholder.png" mode="aspectFill" />
+      <icon type="add" size="32" class="add-icon" />
+    </view>
+
+    <!-- 午餐卡片 -->
+    <view class="meal-card">
+      <image class="meal-img" src="/assets/food_placeholder.png" mode="aspectFill" />
+      <icon type="add" size="32" class="add-icon" />
+    </view>
+  </view>
+</scroll-view>

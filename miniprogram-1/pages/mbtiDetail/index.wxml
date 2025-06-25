@@ -1,0 +1,15 @@
+<view class="mbti-list-container">
+  <view class="mbti-grid">
+    <view class="mbti-card" 
+          wx:for="{{mbtiList}}" 
+          wx:key="type" 
+          bindtap="goToDetail" 
+          data-type="{{item.type}}">
+      <image class="mbti-card-img" src="{{item.img}}" mode="aspectFit"></image>
+      <view class="mbti-card-info">
+        <view class="mbti-card-title">{{item.type}}</view>
+        <view class="mbti-card-name">{{item.name}}</view>
+      </view>
+    </view>
+  </view>
+</view> 

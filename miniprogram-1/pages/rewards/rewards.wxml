@@ -1,0 +1,28 @@
+<view class="profile-page">
+  <!-- 顶部个人信息 -->
+  <view class="profile-header">
+    <image class="profile-avatar" src="{{userInfo.avatarUrl || '/assets/avatar_placeholder.png'}}" mode="aspectFill" />
+    <view class="profile-nickname">{{userInfo.nickName || '未登录'}}</view>
+  </view>
+  <!-- 登录按钮 -->
+  <button wx:if="{{!hasUserInfo}}" class="profile-login-btn" bindtap="onLogin">微信一键登录</button>
+  <!-- 单行功能区 -->
+  <view class="profile-list">
+    <view class="profile-item" bindtap="onFeedback">
+      <text>意见反馈</text>
+      <icon type="edit" size="28" />
+    </view>
+    <view class="profile-item" bindtap="onCheckUpdate">
+      <text>检查更新</text>
+      <text class="profile-version">v1.0</text>
+    </view>
+    <view class="profile-item" bindtap="onSwitchAccount">
+      <text>切换账号</text>
+      <icon type="redo" size="28" />
+    </view>
+    <view class="profile-item" bindtap="onLogout">
+      <text>退出登录</text>
+      <icon type="clear" size="28" />
+    </view>
+  </view>
+</view> 

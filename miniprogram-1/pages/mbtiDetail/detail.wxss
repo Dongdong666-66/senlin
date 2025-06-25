@@ -1,0 +1,108 @@
+.mbti-detail-container {
+  padding: 40rpx 32rpx;
+  background-color: #f7f7f7;
+  min-height: 100vh;
+}
+.mbti-detail-img {
+  display: block;
+  width: 200rpx;
+  height: 200rpx;
+  margin: 0 auto 32rpx auto;
+  border-radius: 24rpx;
+}
+.mbti-detail-title {
+  font-size: 48rpx;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 48rpx;
+  color: #222;
+}
+.mbti-detail-type {
+  font-size: 32rpx;
+  font-weight: normal;
+  color: #888;
+}
+.mbti-detail-section {
+  background-color: #fff;
+  padding: 32rpx;
+  border-radius: 24rpx;
+  margin-bottom: 32rpx;
+  box-shadow: 0 4rpx 24rpx rgba(0,0,0,0.05);
+}
+.mbti-detail-subtitle {
+  font-size: 36rpx;
+  font-weight: bold;
+  margin-bottom: 24rpx;
+  padding-bottom: 16rpx;
+  border-bottom: 1px solid #f0f0f0;
+  color: #333;
+}
+.mbti-detail-content {
+  font-size: 30rpx;
+  line-height: 1.8;
+  color: #555;
+}
+.mbti-detail-desc {
+  font-size: 30rpx;
+  color: #444;
+  margin-bottom: 18rpx;
+  text-align: center;
+}
+.mbti-detail-feature {
+  font-size: 28rpx;
+  color: #666;
+  margin-bottom: 18rpx;
+  text-align: center;
+}
+.mbti-detail-jobs {
+  font-size: 28rpx;
+  color: #888;
+  text-align: center;
+}
+.mbti-detail-list {
+  padding: 24rpx 8rpx;
+}
+.mbti-detail-card {
+  width: 47%;
+  min-width: 300rpx;
+  background: #fff;
+  border-radius: 20rpx;
+  box-shadow: 0 2rpx 10rpx #eee;
+  margin-bottom: 20rpx;
+  padding: 24rpx 8rpx 18rpx 8rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.mbti-detail-img {
+  width: 90rpx;
+  height: 90rpx;
+  margin-bottom: 10rpx;
+}
+.mbti-detail-desc {
+  font-size: 22rpx;
+  color: #444;
+  margin-bottom: 8rpx;
+  text-align: center;
+  min-height: 48rpx;
+  margin-top: 2rpx;
+}
+.mbti-detail-feature {
+  font-size: 20rpx;
+  color: #666;
+  margin-bottom: 8rpx;
+  text-align: center;
+}
+.mbti-detail-jobs {
+  font-size: 20rpx;
+  color: #888;
+  text-align: center;
+}
+.mbti-detail-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 100%;
+  gap: 24rpx 3.5%;
+  margin-bottom: 0;
+} 

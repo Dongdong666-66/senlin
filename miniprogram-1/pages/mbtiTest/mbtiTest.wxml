@@ -1,0 +1,29 @@
+<view class="mbti-test-container">
+  <view class="mbti-test-title">MBTI测试</view>
+  <view class="mbti-test-progress">第{{current+1}}题 / {{questions.length}}</view>
+  <view class="mbti-test-question">{{questions[current].q}}</view>
+  <view class="mbti-test-options">
+    <button class="mbti-test-option{{answers[current]==='A' ? ' mbti-test-option-active' : ''}}" bindtap="chooseOption" data-opt="A">A. {{questions[current].a}}</button>
+    <button class="mbti-test-option{{answers[current]==='B' ? ' mbti-test-option-active' : ''}}" bindtap="chooseOption" data-opt="B">B. {{questions[current].b}}</button>
+    <button class="mbti-test-option{{answers[current]==='C' ? ' mbti-test-option-active' : ''}}" bindtap="chooseOption" data-opt="C">C. {{questions[current].c}}</button>
+  </view>
+  <button class="mbti-test-next" bindtap="nextQuestion">{{current === questions.length-1 ? '提交' : '下一题'}}</button>
+</view>
+<view wx:if="{{showResult}}" class="mbti-result-mask">
+  <view class="mbti-result-modal">
+    <view class="mbti-result-title">你的MBTI为：{{mbtiType}}</view>
+    <view class="mbti-result-btns">
+      <button class="mbti-result-btn" data-action="home" bindtap="onResultAction">返回首页</button>
+      <button class="mbti-result-btn" data-action="detail" bindtap="onResultAction">MBTI详解</button>
+    </view>
+  </view>
+</view>
+<view wx:if="{{showDetail}}" class="mbti-detail-mask">
+  <view class="mbti-detail-modal">
+    <view class="mbti-detail-title">{{mbtiDetail.name}}（{{mbtiType}}）</view>
+    <image wx:if="{{mbtiDetail.img}}" class="mbti-detail-img" src="{{mbtiDetail.img}}" mode="aspectFit"></image>
+    <view class="mbti-detail-desc">{{mbtiDetail.desc}}</view>
+    <view class="mbti-detail-feature">特征：{{mbtiDetail.feature}}</view>
+    <button class="mbti-detail-close" bindtap="closeDetail">关闭</button>
+  </view>
+</view> 

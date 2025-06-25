@@ -1,0 +1,81 @@
+/* progress page style */ 
+.treehole-page {
+  background: #f7f7f7;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+.treehole-header {
+  font-size: 44rpx;
+  font-weight: bold;
+  color: #222;
+  text-align: center;
+  padding: 48rpx 0 12rpx 0;
+  background: #fff;
+}
+.treehole-tip {
+  font-size: 28rpx;
+  color: #888;
+  text-align: center;
+  margin-bottom: 12rpx;
+}
+.treehole-chat {
+  flex: 1;
+  padding: 24rpx 0 24rpx 0;
+  overflow-y: auto;
+  background: #f7f7f7;
+}
+.treehole-msg {
+  display: flex;
+  align-items: flex-end;
+  margin: 18rpx 24rpx;
+}
+.treehole-msg.user {
+  flex-direction: row-reverse;
+}
+.treehole-avatar {
+  width: 64rpx;
+  height: 64rpx;
+  border-radius: 50%;
+  margin: 0 16rpx;
+  background: #eee;
+}
+.treehole-bubble {
+  max-width: 60vw;
+  padding: 22rpx 32rpx;
+  border-radius: 24rpx;
+  font-size: 30rpx;
+  line-height: 1.6;
+  background: #fff;
+  color: #222;
+  box-shadow: 0 2rpx 8rpx #eee;
+}
+.treehole-msg.user .treehole-bubble {
+  background: #4CAF50;
+  color: #fff;
+}
+.treehole-input-bar {
+  display: flex;
+  align-items: center;
+  padding: 18rpx 16rpx 24rpx 16rpx;
+  background: #fff;
+  border-top: 1px solid #f0f0f0;
+}
+.treehole-input {
+  flex: 1;
+  font-size: 30rpx;
+  border: none;
+  background: #f5f5f5;
+  border-radius: 24rpx;
+  padding: 18rpx 24rpx;
+  margin-right: 16rpx;
+}
+.treehole-send-btn {
+  background: #4CAF50;
+  color: #fff;
+  border-radius: 24rpx;
+  font-size: 30rpx;
+  padding: 16rpx 36rpx;
+  border: none;
+} 
